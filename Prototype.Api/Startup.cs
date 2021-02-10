@@ -24,6 +24,12 @@ namespace Prototype.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Open", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
+
             // setup soome http response codes that all controller methods can return
             services.AddControllers(setupAction =>
             {
@@ -62,6 +68,8 @@ namespace Prototype.Api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("Open");
 
             app.UseEndpoints(endpoints =>
             {
