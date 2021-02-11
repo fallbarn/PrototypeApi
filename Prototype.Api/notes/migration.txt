@@ -1,0 +1,5 @@
+﻿add-migration // Creates a new migration file after adding something
+Remove-Migration // remove the last migration, if you haven't updated the db.
+update-database  // Commits to database
+Update-Database 20210205120556_SeedDatabaseMigration
+Update-Database 20210205115834_InitalDatabaseMigration
