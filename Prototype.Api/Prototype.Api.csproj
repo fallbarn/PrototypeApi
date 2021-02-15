@@ -6,6 +6,7 @@
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <AnalysisLevel>latest</AnalysisLevel>
+    <AssemblyName>Prototype.Api</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
